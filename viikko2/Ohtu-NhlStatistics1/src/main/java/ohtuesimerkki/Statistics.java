@@ -6,13 +6,12 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Statistics {
-    private List<Player> players;
-    private Reader reader;
 
-    public Statistics(Reader reader) {
-        //PlayerReader reader = new PlayerReader("http://nhlstatistics.herokuapp.com/players.txt");
-        this.players = reader.getPlayers();
-        this.reader = reader;
+    private List<Player> players;
+
+    public Statistics() {
+        PlayerReader reader = new PlayerReader("http://nhlstatistics.herokuapp.com/players.txt");
+        players = reader.getPlayers();       
     }
 
     public Player search(String name) {
