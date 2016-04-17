@@ -1,1 +1,5 @@
 /TyhjaProjekti/target/
+*.tmp
+target/*
+*~
+
